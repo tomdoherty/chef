@@ -26,6 +26,8 @@ class Chef
       provides :package, os: "linux", platform_family: [ "debian" ]
 
       property :default_release, String, desired_state: false
+      property :response_file, String, desired_state: false
+      property :response_file_variables, Hash, default: lazy { {} }, desired_state: false
 
     end
   end

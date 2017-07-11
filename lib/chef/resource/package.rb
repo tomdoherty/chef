@@ -37,8 +37,6 @@ class Chef
 
       property :version, [ String, Array ]
       property :options, [ String, Array ], coerce: proc { |x| x.is_a?(String) ? x.shellsplit : x }
-      property :response_file, String, desired_state: false
-      property :response_file_variables, Hash, default: lazy { {} }, desired_state: false
       property :source, String, desired_state: false
       property :timeout, [ String, Integer ], desired_state: false
 
